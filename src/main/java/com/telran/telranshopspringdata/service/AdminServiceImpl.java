@@ -1,22 +1,25 @@
 package com.telran.telranshopspringdata.service;
 
-import com.telran.telranshopspringdata.app.additional.Maximizer;
-import com.telran.telranshopspringdata.controller.dto.*;
-import com.telran.telranshopspringdata.data.*;
-import com.telran.telranshopspringdata.data.entity.CategoryEntity;
-import com.telran.telranshopspringdata.data.entity.ProductEntity;
-import com.telran.telranshopspringdata.data.entity.ProductOrderEntity;
-import lombok.val;
+import com.telran.telranshopspringdata.controller.dto.ProductOrderDto;
+import com.telran.telranshopspringdata.controller.dto.ProductStatisticDto;
+import com.telran.telranshopspringdata.controller.dto.UserStatisticDto;
+import com.telran.telranshopspringdata.controller.dto.UserStatisticDtoProjection;
+import com.telran.telranshopspringdata.data.CategoryRepository;
+import com.telran.telranshopspringdata.data.OrderRepository;
+import com.telran.telranshopspringdata.data.ProductRepository;
+import com.telran.telranshopspringdata.data.UserRepository;
+import com.telran.telranshopspringdata.data.document.CategoryEntity;
+import com.telran.telranshopspringdata.data.document.ProductEntity;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.math.BigDecimal;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static org.springframework.transaction.annotation.Isolation.READ_COMMITTED;
 

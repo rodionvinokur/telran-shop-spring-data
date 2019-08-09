@@ -2,8 +2,8 @@ package com.telran.telranshopspringdata.service;
 
 import com.telran.telranshopspringdata.controller.dto.AuthDto;
 import com.telran.telranshopspringdata.data.UserDetailsRepository;
-import com.telran.telranshopspringdata.data.entity.UserDetailsEntity;
-import com.telran.telranshopspringdata.data.entity.UserRoleEntity;
+import com.telran.telranshopspringdata.data.document.UserDetailsEntity;
+import com.telran.telranshopspringdata.data.document.UserRoleEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

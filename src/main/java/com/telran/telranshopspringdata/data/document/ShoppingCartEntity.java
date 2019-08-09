@@ -1,4 +1,4 @@
-package com.telran.telranshopspringdata.data.entity;
+package com.telran.telranshopspringdata.data.document;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -11,10 +11,11 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Entity
 @Builder
-@Table(name = "orders")
-public class OrderEntity {
+@Table(name = "shopping_carts")
+public class ShoppingCartEntity {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(
@@ -23,11 +24,8 @@ public class OrderEntity {
     )
     private String id;
     private Timestamp date;
-    @Enumerated(value = EnumType.STRING)
-    private OrderStatus status;
-    @ManyToOne
-    @JoinColumn(name = "owner_id")
-    private UserEntity owner;
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "shoppingCart")
     private List<ProductOrderEntity> products;
+    @OneToOne(mappedBy = "shoppingCart")
+    private UserEntity owner;
 }

@@ -2,7 +2,7 @@ package com.telran.telranshopspringdata.service;
 
 import com.telran.telranshopspringdata.controller.dto.*;
 import com.telran.telranshopspringdata.data.*;
-import com.telran.telranshopspringdata.data.entity.*;
+import com.telran.telranshopspringdata.data.document.*;
 import lombok.val;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 import static com.telran.telranshopspringdata.service.Mapper.map;
 import static org.springframework.transaction.annotation.Isolation.READ_COMMITTED;

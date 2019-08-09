@@ -1,8 +1,8 @@
 package com.telran.telranshopspringdata.service;
 
 import com.telran.telranshopspringdata.data.UserDetailsRepository;
-import com.telran.telranshopspringdata.data.entity.UserDetailsEntity;
-import com.telran.telranshopspringdata.data.entity.UserRoleEntity;
+import com.telran.telranshopspringdata.data.document.UserDetailsEntity;
+import com.telran.telranshopspringdata.data.document.UserRoleEntity;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

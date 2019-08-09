@@ -1,6 +1,6 @@
 package com.telran.telranshopspringdata.data;
 
-import com.telran.telranshopspringdata.data.entity.UserEntity;
+import com.telran.telranshopspringdata.data.document.UserEntity;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;

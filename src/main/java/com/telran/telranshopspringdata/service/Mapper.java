@@ -1,9 +1,7 @@
 package com.telran.telranshopspringdata.service;
 
 import com.telran.telranshopspringdata.controller.dto.*;
-import com.telran.telranshopspringdata.data.OrderRepository;
-import com.telran.telranshopspringdata.data.entity.*;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.telran.telranshopspringdata.data.document.*;
 
 import static java.util.stream.Collectors.toList;
 
