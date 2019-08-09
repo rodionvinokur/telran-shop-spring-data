@@ -1,0 +1,122 @@
+### Add new User
+POST http://localhost:8080/registration
+Content-Type: application/json
+
+{"email": "misha@mail.com","password": "password"}
+
+### Add categories START >>>>>>>>>>>>
+POST http://localhost:8080/admin/category
+Content-Type: application/json
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+{"name": "Phone"}
+
+###
+
+POST http://localhost:8080/admin/category
+Content-Type: application/json
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+{"name": "Leptop"}
+
+###
+
+POST http://localhost:8080/admin/category
+Content-Type: application/json
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+{"name": "PC"}
+
+### Add categories END <<<<<<<<<<<<<<<<<<
+
+### Add products START >>>>>>>>>>>>>>>>>>
+POST http://localhost:8080/admin/product
+Content-Type: application/json
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+{"name":"Samsumg S10+", "price": 3000.00,"category": {"id": "e006b8a1-7b06-47d4-a567-ae045ffb0bf"}}
+
+###
+
+POST http://localhost:8080/admin/product
+Content-Type: application/json
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+{"name":"IPhone X", "price": 3500.00,"category": {"id": "[category_id]"}}
+
+###
+
+POST http://localhost:8080/admin/product
+Content-Type: application/json
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+{"name":"Xiaomi A3", "price": 2700.00,"category": {"id": "6c1f3777-fc3c-4ab9-bcd9-7936063934b0"}}
+
+###
+
+POST http://localhost:8080/admin/product
+Content-Type: application/json
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+{"name":"MacBook Pro i9", "price": 8700.00,"category": {"id": "f19936ba-b708-4b6a-a0e8-28e5dd25cbfd"}}
+
+###
+
+POST http://localhost:8080/admin/product
+Content-Type: application/json
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+{"name":"Lenovo x10", "price": 6570.00,"category": {"id": "[category_id]"}}
+
+###
+
+POST http://localhost:8080/admin/product
+Content-Type: application/json
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+{"name":"iMac PRO", "price": 18350.00,"category": {"id": "[category_id]"}}
+
+###
+
+POST http://localhost:8080/admin/product
+Content-Type: application/json
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+{"name":"ABS Master-Pro Ryzen 5 2400G", "price": 13670.00,"category": {"id": "[category_id]"}}
+
+### Add products END <<<<<<<<<<<<<<<<<<<<<<<
+
+
+###
+
+
+### Delete product
+DELETE http://localhost:8080/admin/product/5c9ccdd3-c0bf-400c-98d7-e70f54d78d07
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+
+### getStatisticsByMostPopularProduct
+GET http://localhost:8080/admin/product/popular
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+Content-Type: application/json
+
+###
+
+### getStatisticsByMostProfitableProduct
+GET http://localhost:8080/admin/product/profit
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+Content-Type: application/json
+
+
+### getStatisticsByMostActiveUser
+GET http://localhost:8080/admin/user/active
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+Content-Type: application/json
+
+###
+
+### getStatisticsByMostProfitableUser
+GET http://localhost:8080/admin/user/profit
+Authorization: Basic YWRtaW5AbWFpbC5jb206YWRtaW4=
+Content-Type: application/json
+
+###

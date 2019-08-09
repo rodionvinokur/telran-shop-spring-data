@@ -1,0 +1,12 @@
+### Get all categories
+GET http://localhost:8080/categories
+
+###
+
+### Get all products
+GET http://localhost:8080/products
+
+### Get products by category
+GET http://localhost:8080/products/[category_name]
+
+###

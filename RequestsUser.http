@@ -1,0 +1,63 @@
+### Add user profile
+POST http://localhost:8080/user
+Content-Type: application/json
+authorization: Basic dmFzeWFAbWFpbC5jb206cGFzc3dvcmQ=
+
+{"email": "vasya@mail.com","name": "Vasya","phone": "05555555"}
+
+
+### GetUser Profile
+GET http://localhost:8080/user
+authorization: Basic dmFzeWFAbWFpbC5jb206cGFzc3dvcmQ=
+
+### Delete all from cart
+DELETE http://localhost:8080/user/cart/all
+authorization: Basic dmFzeWFAbWFpbC5jb206cGFzc3dvcmQ=
+
+
+### Delete Some quntity of product with id
+DELETE http://localhost:8080/cart/53dafc09-76e9-4361-89d7-66fcc671fbfb/1
+authorization: Basic dmFzeWFAbWFpbC5jb206cGFzc3dvcmQ=
+
+### Add Product to cart
+POST http://localhost:8080/user/cart
+Content-Type: application/json
+authorization: Basic dmFzeWFAbWFpbC5jb206cGFzc3dvcmQ=
+
+{"productId":"58960bc0-4c90-4160-bf30-85a65a7c25d0","count":2}
+
+###
+POST http://localhost:8080/user/cart
+Content-Type: application/json
+authorization: Basic dmFzeWFAbWFpbC5jb206cGFzc3dvcmQ=
+
+{"productId":"53dafc09-76e9-4361-89d7-66fcc671fbfb","count":1}
+
+###
+
+### Get User Shopping cart
+GET http://localhost:8080/user/cart
+authorization: Basic dmFzeWFAbWFpbC5jb206cGFzc3dvcmQ=
+
+###
+
+### Get All User's orders
+GET http://localhost:8080/user/orders
+authorization: Basic dmFzeWFAbWFpbC5jb206cGFzc3dvcmQ=
+
+###
+
+### Checkout by User
+GET http://localhost:8080/user/checkout
+authorization: Basic dmFzeWFAbWFpbC5jb206cGFzc3dvcmQ=
+
+###
+
+### Add balance to user
+POST http://localhost:8080/user/balance
+Content-Type: application/json
+authorization: Basic dmFzeWFAbWFpbC5jb206cGFzc3dvcmQ=
+
+{"amount":30000.00}
+
+###
